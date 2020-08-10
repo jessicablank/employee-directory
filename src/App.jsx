@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import { useEffect } from "react";
-import "./style.css"
-
-//const axios = require ('axios');
+import "./App.css"
 
 function App() {
   const [employees, setEmployees] = useState([]);
@@ -21,12 +19,13 @@ function App() {
       </header>
       {employees.map((each,index)=>{
         return (
-          <p className="first-name" key={index}> First Name
-    
-          </p>
+          <tr className="first-name" key={index}> 
+          <td>{each.name.first}</td>
+          <td>{each.name.last}</td>
+          <td>{each.name.email}</td>
+          <td>{each.name.picture}</td>
+          </tr>
         )
-
-        
       })
       
     }
