@@ -21,8 +21,8 @@ function App() {
       </header>
       {employees.map((each,index)=>{
         return (
-          <p className="first-name" key={index}>
-        {each.name.first}
+          <p className="first-name" key={index}> First Name
+    
           </p>
         )
 
