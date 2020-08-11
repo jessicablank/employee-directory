@@ -10,7 +10,7 @@ This is my first bootcamp homework assignment bootstrapped with [Create React Ap
 * [Installation](#installation-instructions)
 * [Usage](#usage)
 * [Tests](#tests)
-* [Structure](#/componentStructure)
+* [Structure](#/componentStructure.md)
 * [Questions](#questions)
 * [License](#license-info)
 
