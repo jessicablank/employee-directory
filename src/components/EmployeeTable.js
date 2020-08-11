@@ -7,6 +7,7 @@ class EmployeeTable extends Component {
     employees: [],
     allEmployees: [],
     order: "ascending",
+    searchText: ""
   };
 
   componentDidMount() {
@@ -54,13 +55,13 @@ class EmployeeTable extends Component {
       });
 
       return (
-        <table>
+        <table className="table">
           <thead>
             <tr>
-              <th>Picture</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>State</th>
+              <th scope="col">Picture</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">State</th>
             </tr>
           </thead>
           <tbody>
