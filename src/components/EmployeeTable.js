@@ -38,9 +38,22 @@ class EmployeeTable extends Component {
     });
   };
 
+  handleInputChange = event => {
+    
+    const { name, value } = event.target; 
+    const filteredEmployee = this.state.allEmployees.filter((employee) => employee.location.state.toLowerCase().startsWith(value.toLowerCase()))
+  
+    this.setState({
+        [name]: value,
+        employees : value ===""? this.state.allEmployees:filteredEmployee
+    });
+   
+};
+
+
   renderPage() {
     if (this.state.employees.length === 0) {
-      return <h1>Please refresh the page</h1>;
+      return <h1>No Employees Found. Please refresh the page</h1>;
     } else {
       const sortedEmails = this.state.employees.sort((a, b) => {
         const aEmail = a.email
@@ -61,6 +74,16 @@ class EmployeeTable extends Component {
       });
 
       return (
+        <div>
+          <div className="text-right pb-2 mt-3">
+          <input className = "border border-info"
+          value = {this.state.searchText}
+          name = "searchText"
+          onChange = {this.handleInputChange}
+          type = "text"
+          placeholder = "Search by State"
+          />
+          </div>
         <table className="table">
           <thead>
             <tr>
@@ -84,6 +107,7 @@ class EmployeeTable extends Component {
             })}
           </tbody>
         </table>
+        </div>
       );
     }
   }

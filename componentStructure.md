@@ -1,7 +1,6 @@
 # src folder
 * The _index.js_ file builds the page.
     * Requires:
-        * import "bootstrap/dist/css/bootstrap.css";
         * import React from 'react';
         * import ReactDOM from 'react-dom';
         * import App from './App';
@@ -23,7 +22,6 @@
         * import React from "react";
     * Exports:
         * export default Header;
-### Table folder
 * The _EmployeeTable.js_ file populates table with all data.
     * Requires:
         * import React, { Component } from "react";
@@ -35,9 +33,8 @@
         * starting with `class employeeTable extends Component`
             * set State object
             * componentDidMount()
-            * function to sort employee names
-            * function to search employee names using a filter
-            * function to render the page after sort
+            * function to sort employee emails
+            * function to search employee states (as in location) with a filter
 * The _TableRow.js_ file populates the table with sorted data.
     * Requires:
         * import React from "react";
