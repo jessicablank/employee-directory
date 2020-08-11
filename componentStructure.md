@@ -15,16 +15,16 @@
     * Exports:
         * export default App;
     * PseudoCode:
-        * function App() returns div with a container class (className) containing <Header /> and <employeeTable />
+        * function App() returns div with a container class (className) containing the header and employee table
 
 ## components folder
-* The _header.js_ file styles the page header.
+* The _Header.js_ file styles the page header.
     * Requires:
         * import React from "react";
-        * 
     * Exports:
         * export default Header;
-* The _employeeTable.js_ file populates table with all data.
+### Table folder
+* The _EmployeeTable.js_ file populates table with all data.
     * Requires:
         * import React, { Component } from "react";
         * import API from "../utils/API";
@@ -38,11 +38,11 @@
             * function to sort employee names
             * function to search employee names using a filter
             * function to render the page after sort
-* The _employeeSort.js_ file populates the table with sorted data.
+* The _TableRow.js_ file populates the table with sorted data.
     * Requires:
         * import React from "react";
     * Exports:
-        * export employeeSort;
+        * export TableRow;
 
 
 ## utils folder
@@ -53,7 +53,7 @@
             * export default{
                 getEmployee: function()
                 {
-                    return axios.get("https://randomuser.me/api?results=30");
+                    return axios.get("https://randomuser.me/api?results=30&nat=us");
                 }
             }
         
