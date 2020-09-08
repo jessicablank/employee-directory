@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import API from "../utils/API.js";
 import TableRow from "./TableRow";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSortAlphaDown } from '@fortawesome/free-solid-svg-icons'
-import { faSortAlphaDownAlt } from '@fortawesome/free-solid-svg-icons'
-import { trackPromise } from 'react-promise-tracker';
+import LoadingIndicator from "./LoadingIndicator";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortAlphaDown } from "@fortawesome/free-solid-svg-icons";
+import { faSortAlphaDownAlt } from "@fortawesome/free-solid-svg-icons";
+import { trackPromise } from "react-promise-tracker";
 
 class EmployeeTable extends Component {
   //sets the "table"
@@ -12,8 +13,8 @@ class EmployeeTable extends Component {
     employees: [],
     allEmployees: [],
     order: "ascending",
-    icon :  faSortAlphaDown,
-    searchText: ""
+    icon: faSortAlphaDown,
+    searchText: "",
   };
 
   componentDidMount() {
@@ -22,77 +23,78 @@ class EmployeeTable extends Component {
 
   getEmployee = () => {
     trackPromise(
-    API.getEmployee()
-
+      API.getEmployee()
       .then((res) => {
         this.setState({
           employees: res.data.results,
           allEmployees: res.data.results,
         });
-      }))
-      .catch((error) => console.log(error));
+      })
+    ).catch((error) => console.log(error));
   };
 
- 
   handleEmailSort = () => {
     this.setState({
       order: this.state.order === "ascending" ? "descending" : "ascending",
-      icon: this.state.icon === faSortAlphaDown ?  faSortAlphaDownAlt  :  faSortAlphaDown
+      icon:
+        this.state.icon === faSortAlphaDown
+          ? faSortAlphaDownAlt
+          : faSortAlphaDown,
     });
   };
 
-  handleInputChange = event => {
-    
-    const { name, value } = event.target; 
-    const filteredEmployee = this.state.allEmployees.filter((employee) => employee.location.state.toLowerCase().startsWith(value.toLowerCase()))
-  
-    this.setState({
-        [name]: value,
-        employees : value ===""? this.state.allEmployees:filteredEmployee
-    });
-   
-};
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
+    const filteredEmployee = this.state.allEmployees.filter((employee) =>
+      employee.location.state.toLowerCase().startsWith(value.toLowerCase())
+    );
 
+    this.setState({
+      [name]: value,
+      employees: value === "" ? this.state.allEmployees : filteredEmployee,
+    });
+  };
 
   renderPage() {
-    if (this.state.employees.length === 0) {
-      return <h1>No Employees Found. Please refresh the page</h1>;
-    } else {
-      const sortedEmails = this.state.employees.sort((a, b) => {
-        const aEmail = a.email
-        const bEmail = b.email
-        if (aEmail === bEmail) {
-          return 0;
-        }
-        if (this.state.order === "ascending") {
-          if (aEmail < bEmail) {
-            return -1;
-          }
-          return 1;
-        }
+    const sortedEmails = this.state.employees.sort((a, b) => {
+      const aEmail = a.email;
+      const bEmail = b.email;
+      if (aEmail === bEmail) {
+        return 0;
+      }
+      if (this.state.order === "ascending") {
         if (aEmail < bEmail) {
-          return 1;
+          return -1;
         }
-        return -1;
-      });
+        return 1;
+      }
+      if (aEmail < bEmail) {
+        return 1;
+      }
+      return -1;
+    });
 
-      return (
-        <div>
-          <div className="text-right pb-2 mt-3">
-          <input className = "border border-info"
-          value = {this.state.searchText}
-          name = "searchText"
-          onChange = {this.handleInputChange}
-          type = "text"
-          placeholder = "Search by State"
+    return (
+      <div>
+        <div className="text-right pb-2 mt-3">
+          <input
+            className="border border-info"
+            value={this.state.searchText}
+            name="searchText"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Search by State"
           />
-          </div>
+        </div>
         <table className="table">
           <thead>
             <tr>
               <th scope="col">Picture</th>
               <th scope="col">Name</th>
-              <th scope="col" onClick={this.handleEmailSort}> Email <FontAwesomeIcon icon={this.state.icon} /></th>
+              <th scope="col" onClick={this.handleEmailSort}>
+                {" "}
+                Email <FontAwesomeIcon icon={this.state.icon} />
+              </th>
               <th scope="col">State</th>
             </tr>
           </thead>
@@ -110,9 +112,8 @@ class EmployeeTable extends Component {
             })}
           </tbody>
         </table>
-        </div>
-      );
-    }
+      </div>
+    );
   }
 
   render() {
