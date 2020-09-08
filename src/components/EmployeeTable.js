@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API.js";
 import TableRow from "./TableRow";
-import LoadingIndicator from "./LoadingIndicator";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortAlphaDown } from "@fortawesome/free-solid-svg-icons";
 import { faSortAlphaDownAlt } from "@fortawesome/free-solid-svg-icons";

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { usePromiseTracker } from "react-promise-tracker";
 import Loader from "react-loader-spinner";
 
@@ -15,7 +15,7 @@ const LoadingIndicator = (props) => {
           alignItems: "center",
         }}
       >
-        <Loader type="ThreeDots" color="#2BAD60" height="100" width="100" />
+        <Loader type="RevolvingDot" color="#2BAD60" height="100" width="100" />
       </div>
     )
   );
