@@ -4,8 +4,10 @@ import TableRow from "./TableRow";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSortAlphaDown } from '@fortawesome/free-solid-svg-icons'
 import { faSortAlphaDownAlt } from '@fortawesome/free-solid-svg-icons'
+import { trackPromise } from 'react-promise-tracker';
 
 class EmployeeTable extends Component {
+  //sets the "table"
   state = {
     employees: [],
     allEmployees: [],
@@ -19,6 +21,7 @@ class EmployeeTable extends Component {
   }
 
   getEmployee = () => {
+    trackPromise(
     API.getEmployee()
 
       .then((res) => {
@@ -26,7 +29,7 @@ class EmployeeTable extends Component {
           employees: res.data.results,
           allEmployees: res.data.results,
         });
-      })
+      }))
       .catch((error) => console.log(error));
   };
 
