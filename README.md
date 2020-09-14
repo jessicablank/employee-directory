@@ -1,5 +1,9 @@
 # React Employee Directory
+[![Build Status](https://travis-ci.org/jessicablank/employee-directory.svg?branch=master)](https://travis-ci.org/jessicablank/employee-directory)
+[![GitHub stars](https://img.shields.io/github/stars/jessicablank/employee-directory)](https://github.com/jessicablank/employee-directory/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/jcstang/not-reddit)](https://github.com/jessicablank/employee-directory/network)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/jessicablank/employee-directory)](https://github.com/jessicablank/employee-directory/issues)
 
 Deployed on [github pages](https://jessicablank.github.io/employee-directory/)
 
