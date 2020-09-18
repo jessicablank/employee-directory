@@ -22,8 +22,7 @@ class EmployeeTable extends Component {
 
   getEmployee = () => {
     trackPromise(
-      API.getEmployee()
-      .then((res) => {
+      API.getEmployee().then((res) => {
         this.setState({
           employees: res.data.results,
           allEmployees: res.data.results,
@@ -42,7 +41,17 @@ class EmployeeTable extends Component {
     });
   };
 
-  handleInputChange = (event) => {
+  handleNameSort = () => {
+    this.setState({
+      order: this.state.order === "ascending" ? "descending" : "ascending",
+      icon:
+        this.state.icon === faSortAlphaDown
+          ? faSortAlphaDownAlt
+          : faSortAlphaDown,
+    });
+  };
+
+  handleStateChange = (event) => {
     const { name, value } = event.target;
     const filteredEmployee = this.state.allEmployees.filter((employee) =>
       employee.location.state.toLowerCase().startsWith(value.toLowerCase())
@@ -53,6 +62,19 @@ class EmployeeTable extends Component {
       employees: value === "" ? this.state.allEmployees : filteredEmployee,
     });
   };
+
+  // Savings to sort by employee name
+  // handleNameChange = (event) => {
+  //   const { name, value } = event.target;
+  //   const filteredEmployee = this.state.allEmployees.filter((employee) =>
+  //     employee.name.first.toLowerCase().startsWith(value.toLowerCase())
+  //   );
+
+  //   this.setState({
+  //     [name]: value,
+  //     employees: value === "" ? this.state.allEmployees : filteredEmployee,
+  //   });
+  // };
 
   renderPage() {
     const sortedEmails = this.state.employees.sort((a, b) => {
@@ -73,14 +95,45 @@ class EmployeeTable extends Component {
       return -1;
     });
 
+    // const sortedNames = this.state.employees.sort((a, b) => {
+    //   const aName = a.name;
+    //   const bName = b.name;
+    //   if (aName === bName) {
+    //     return 0;
+    //   }
+    //   if (this.state.order === "ascending") {
+    //     if (aName < bName) {
+    //       return -1;
+    //     }
+    //     return 1;
+    //   }
+    //   if (aName < bName) {
+    //     return 1;
+    //   }
+    //   return -1;
+    // });
+
     return (
       <div>
-        <div className="text-right pb-2 mt-3">
+        {/* <div className="text-right pb-2 mt-3">
           <input
+            id="sortName"
             className="border border-info"
             value={this.state.searchText}
             name="searchText"
-            onChange={this.handleInputChange}
+            onChange={this.handleNameChange}
+            type="text"
+            placeholder="Search by Name"
+          />
+        </div> */}
+      
+        <div className="text-right pb-2 mt-3">
+          <input
+          id="sortSort"
+            className="border border-info"
+            value={this.state.searchText}
+            name="searchText"
+            onChange={this.handleStateChange}
             type="text"
             placeholder="Search by State"
           />
@@ -89,12 +142,18 @@ class EmployeeTable extends Component {
           <thead>
             <tr>
               <th scope="col">Picture</th>
-              <th scope="col">Name</th>
+              <th scope="col" onClick={this.handleEmailSort}>
+                {" "}
+                Name <FontAwesomeIcon icon={this.state.icon} />
+              </th>
               <th scope="col" onClick={this.handleEmailSort}>
                 {" "}
                 Email <FontAwesomeIcon icon={this.state.icon} />
               </th>
-              <th scope="col">State</th>
+              <th scope="col" onClick={this.handleEmailSort}>
+                {" "}
+                State <FontAwesomeIcon icon={this.state.icon} />
+              </th>
             </tr>
           </thead>
           <tbody>
