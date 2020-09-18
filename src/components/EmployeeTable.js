@@ -126,7 +126,7 @@ class EmployeeTable extends Component {
             placeholder="Search by Name"
           />
         </div> */}
-      
+        Save to use for searching by employees state
         <div className="text-right pb-2 mt-3">
           <input
           id="sortSort"
@@ -150,10 +150,7 @@ class EmployeeTable extends Component {
                 {" "}
                 Email <FontAwesomeIcon icon={this.state.icon} />
               </th>
-              <th scope="col" onClick={this.handleEmailSort}>
-                {" "}
-                State <FontAwesomeIcon icon={this.state.icon} />
-              </th>
+              <th scope="col">State</th>
             </tr>
           </thead>
           <tbody>
