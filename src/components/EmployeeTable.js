@@ -51,6 +51,16 @@ class EmployeeTable extends Component {
     });
   };
 
+  handleStateSort = () => {
+    this.setState({
+      order: this.state.order === "ascending" ? "descending" : "ascending",
+      icon:
+        this.state.icon === faSortAlphaDown
+          ? faSortAlphaDownAlt
+          : faSortAlphaDown,
+    });
+  };
+
   handleStateChange = (event) => {
     const { name, value } = event.target;
     const filteredEmployee = this.state.allEmployees.filter((employee) =>
@@ -63,18 +73,18 @@ class EmployeeTable extends Component {
     });
   };
 
-  // Savings to sort by employee name
-  // handleNameChange = (event) => {
-  //   const { name, value } = event.target;
-  //   const filteredEmployee = this.state.allEmployees.filter((employee) =>
-  //     employee.name.first.toLowerCase().startsWith(value.toLowerCase())
-  //   );
 
-  //   this.setState({
-  //     [name]: value,
-  //     employees: value === "" ? this.state.allEmployees : filteredEmployee,
-  //   });
-  // };
+  handleNameChange = (event) => {
+    const { name, value } = event.target;
+    const filteredEmployee = this.state.allEmployees.filter((employee) =>
+      employee.name.first.toLowerCase().startsWith(value.toLowerCase())
+    );
+
+    this.setState({
+      [name]: value,
+      employees: value === "" ? this.state.allEmployees : filteredEmployee,
+    });
+  };
 
   renderPage() {
     const sortedEmails = this.state.employees.sort((a, b) => {
@@ -126,7 +136,7 @@ class EmployeeTable extends Component {
             placeholder="Search by Name"
           />
         </div> */}
-        Save to use for searching by employees state
+       
         <div className="text-right pb-2 mt-3">
           <input
           id="sortSort"
