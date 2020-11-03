@@ -22,14 +22,14 @@ const Directory = () => {
     }, []);
 
 
-    //Update filtered employees whenever something changes
+    //update the page when something changes
     useEffect(() => {
         
-        let newEmployees = [...employees]
+        let filterEmployees = [...employees]
 
         //apply filters
-        if(newEmployees.length && filterObj.name){
-            newEmployees = newEmployees.filter(employee => {
+        if(filterEmployees.length && filterObj.name){
+            filterEmployees = filterEmployees.filter(employee => {
                 return (`${employee.name.first.toLowerCase()}  ${employee.name.last.toLowerCase()}`.includes(filterObj.name.toLowerCase()));
             })
         }
@@ -58,8 +58,8 @@ const Directory = () => {
         }
 
         //apply sorting
-        if(newEmployees.length && sortObj){
-            newEmployees = newEmployees.sort((a, b) => {
+        if(filterEmployees.length && sortObj){
+            filterEmployees = filterEmployees.sort((a, b) => {
                 //get output from sort function
                 let sortedEmployees = sortFunctions[sortObj.field](a, b)
 
@@ -70,7 +70,7 @@ const Directory = () => {
             })
         }
 
-        updateFilteredEmployees(newEmployees);
+        updateFilteredEmployees(filterEmployees);
     }, [employees, sortObj, filterObj])
 
 
