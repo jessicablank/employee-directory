@@ -15,7 +15,7 @@ const Directory = () => {
     //Call API on page load with loading indicator
     useEffect(() => {
         trackPromise(
-        fetch('https://randomuser.me/api?results=50').then(res => res.json()).then(json => {
+        fetch('https://randomuser.me/api?results=100').then(res => res.json()).then(json => {
             //console.log(json)
             setEmployees(json.results);
         }))
