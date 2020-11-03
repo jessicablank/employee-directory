@@ -1,13 +1,15 @@
 import React from 'react';
 
-const TableRow = (props) => {
+const TableRow = ({employee}) => {
 
     return (
         <tr>
-            <th><img src={props.picture} alt={props.name} /></th>
-            <td>{props.name}</td>
-            <td>{props.email}</td>
-            <td>{props.state}</td>
+            <th><img src={employee.picture.medium} alt={`${employee.name.first} ${employee.name.last} image`} /></th>
+            <td>{employee.name.first} {employee.name.last}</td>
+            <td>{employee.login.username}</td>
+            <td>{employee.login.password}</td>
+            <td>{employee.dob.age}</td>
+            <td>{employee.location.country}</td>
         </tr>
     );
 };

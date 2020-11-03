@@ -8,11 +8,11 @@
 Deployed on [github pages](https://jessicablank.github.io/employee-directory/)
 
 ## Description:  
-This is my first bootcamp homework assignment bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my first boot camp homework assignment bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Table of Contents:
 * [Installation](#installation-instructions)
-* [Usage](#usage)
+* [Project Story](#project-story)
 * [Tests](#tests)
 * [Structure](/componentStructure.md)
 * [Questions](#questions)
@@ -22,15 +22,29 @@ This is my first bootcamp homework assignment bootstrapped with [Create React Ap
 
 `npm i` to load dependencies. 
 
-## Usage
-`npm start` to view on localhost port 3000
+## Project Story
+The original homework assignment for this project produced a pretty basic application that met the requirements below for Minimum Viable Product (MVP):
 
-![demonstration gif](https://github.com/jessicablank/employee-directory/blob/master/assets/homepageGIF.gif)
-
-## Tests
 * When the page loads, a list of random employees from [Random User Generator API](https://randomuser.me/) is displayed in a table. 
 * When the user clicks on the icon next to email, the employees are sorted in ascending or descending order based on email address. 
 * When the user enters a state name in the search field, the employees are sorted by their state of residence. 
+
+![demonstration gif](https://github.com/jessicablank/employee-directory/blob/master/assets/homepageGIF.gif)
+
+
+This was my first React application so my brain wasn't thinking in terms of Components yet. It wasn't until I came back to add the Loading Indicator that componentization started to click. The sorting function could work for names, as well as ages, if the sort was broken out into it's own component. 
+
+Original File Structure: 
+
+├── App.css
+├── App.jsx
+├── components
+|  ├── EmployeeTable.js <--All the sorting logic was here-->
+|  ├── Header.js
+|  └── TableRow.js
+├── index.js
+└── utils
+   └── API.js
 
 ## Questions
 You can reach the author, Jessica Blankemeier, via [github](http://github.com/jessicablank) and [email](mailto:jessicablankemeier@gmail.com)
