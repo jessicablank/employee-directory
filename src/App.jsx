@@ -2,13 +2,13 @@ import React from "react";
 import Header from './components/Header';
 
 import LoadingIndicator from './components/LoadingIndicator';
-import Directory from './components/Directory'
+import DataSort from './components/DataSort'
 
 function App() {
   return (
     <div className="container">
     <Header />
-    <Directory />
+    <DataSort />
     <LoadingIndicator/>
     </div>
   );

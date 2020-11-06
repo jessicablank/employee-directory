@@ -5,7 +5,7 @@ import HandleSearch from './HandleSearch'
 import EmployeeTable from './EmployeeTable'
 import { trackPromise } from "react-promise-tracker";
 
-const Directory = () => {
+const DataSort = () => {
 
     const [employees, setEmployees] = useState([]);
     const [sortObj, updateSort] = useState({field: "name", order: "asc"});
@@ -101,4 +101,4 @@ const Directory = () => {
     );
 };
 
-export default Directory;
+export default DataSort;
