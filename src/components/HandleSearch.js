@@ -1,16 +1,27 @@
-import React from 'react';
+import React from "react";
+import { FormControl } from "react-bootstrap";
+import InputGroup from "react-bootstrap/InputGroup";
+import  "../styles/SearchBox.css"
 
-const HandleSearch = ({updateFilter}) => {
+const HandleSearch = ({ updateFilter }) => {
+  const filterChangeHandler = (event) => {
+    updateFilter({ name: event.target.value });
+  };
 
-    const filterChangeHandler = (e) => {
-        updateFilter({name: e.target.value})
-    }
-
-    return (
-        <div className="content">
-            <input type="text" className="form-control" placeholder="Search by Agent Name" onChange={filterChangeHandler}></input>
-        </div>
-    );
+  return (
+    <div>
+      <InputGroup size="md" className="mb-3 search-box">
+          <InputGroup.Prepend>
+          <InputGroup.Text>Search By Agent Name</InputGroup.Text>
+          </InputGroup.Prepend>
+          <FormControl
+        placeholder="Start Typing ... "
+        aria-label="Search By Agent Name"
+        onChange={filterChangeHandler}
+      />
+      </InputGroup>
+    </div>
+  );
 };
 
 export default HandleSearch;

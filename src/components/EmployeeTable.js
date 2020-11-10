@@ -1,16 +1,19 @@
 import React from "react";
-
+import Container from 'react-bootstrap/Container'
 import SortToggle from "../utils/SortToggle";
+import Table from 'react-bootstrap/Table'
 import TableRow from "./TableRow";
 
 function EmployeeTable ({employees, sortClickHandler, sortObj}) {
   return (
-    <table className="table table-striped">
+    <Container fluid>
+    <Table striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>Picture</th>
           <th>
             Agent Name
+            {" "}
             <SortToggle
             field="name"
             sortClickHandler={sortClickHandler}
@@ -18,6 +21,7 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
           </th>
           <th>
             Code Name
+            {" "}
             <SortToggle
             field="username"
             sortClickHandler={sortClickHandler}
@@ -25,6 +29,7 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
           </th>
           <th>
             Last Mission
+            {" "}
             <SortToggle
             field="password"
             sortClickHandler={sortClickHandler}
@@ -32,6 +37,7 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
           </th>
           <th>
             Age
+            {" "}
             <SortToggle
             field="age"
             sortClickHandler={sortClickHandler}
@@ -39,6 +45,7 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
           </th>
           <th>
             Country
+            {" "}
             <SortToggle
             field="country"
             sortClickHandler={sortClickHandler}
@@ -49,7 +56,8 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
       <tbody>
       {employees.map((employee, i) => <TableRow employee={employee} key={i} />)}
       </tbody>
-    </table>
+    </Table>
+    </Container>
   );
 }
   
