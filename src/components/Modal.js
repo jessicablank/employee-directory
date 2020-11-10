@@ -8,9 +8,9 @@ function Modal({ onHide, employee }) {
     <>
       <Modal show={true} onHide={onHide}>
         <Modal.Header closeButton>
-          <Modal.Title placeholder>{task.title}</Modal.Title>
+          <Modal.Title>{employee.name.first} {employee.name.last}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{task.textBody}</Modal.Body>
+        <Modal.Body>{employee.phone}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onHide}>
             Close
