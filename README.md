@@ -1,5 +1,5 @@
 # React Employee Directory
-[![Build Status](https://travis-ci.org/jessicablank/employee-directory.svg?branch=master)](https://travis-ci.org/jessicablank/employee-directory)
+
 [![GitHub stars](https://img.shields.io/github/stars/jessicablank/employee-directory)](https://github.com/jessicablank/employee-directory/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/jessicablank/employee-directory)](https://github.com/jessicablank/employee-directory/network)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -34,8 +34,11 @@ The original homework assignment for this project produced a pretty basic applic
 
 This was my first React application so my brain wasn't thinking in terms of Components yet. It wasn't until I came back to add the Loading Indicator that componentization started to click. The sorting function could work for names, as well as ages, if the sort was broken out into it's own component. 
 
-Original File Structure: 
+I decided to re-imagine this application as a "Secret Agent Directory." 
 
+
+Original File Structure: 
+```
 ├── App.css
 ├── App.jsx
 ├── components
