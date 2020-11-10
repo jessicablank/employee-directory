@@ -34,7 +34,9 @@ The original homework assignment for this project produced a pretty basic applic
 
 This was my first React application so my brain wasn't thinking in terms of Components yet. It wasn't until I came back to add the Loading Indicator that componentization started to click. The sorting function could work for names, as well as ages, if the sort was broken out into it's own component. 
 
-I decided to re-imagine this application as a "Secret Agent Directory." 
+I decided to re-imagine this application as an international "Secret Agent Directory." The work in progress uses data from the Random User API to create an agent code name. This version also uses the [Country Flags API](https://www.countryflags.io/) to show the country flag for the agent's nation of origin. 
+
+![directory gif](https://github.com/jessicablank/employee-directory/blob/master/assets/homepageGIF.gif)
 
 
 Original File Structure: 
