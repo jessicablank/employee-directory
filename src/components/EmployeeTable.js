@@ -1,13 +1,12 @@
 import React from "react";
-import Container from 'react-bootstrap/Container'
+// import Container from 'react-bootstrap/Container'
 import SortToggle from "../utils/SortToggle";
 import Table from 'react-bootstrap/Table'
 import TableRow from "./TableRow";
 
 function EmployeeTable ({employees, sortClickHandler, sortObj}) {
   return (
-    <Container fluid>
-    <Table striped bordered hover variant="dark">
+    <Table fluid responsive striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>Picture</th>
@@ -57,7 +56,6 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
       {employees.map((employee, i) => <TableRow employee={employee} key={i} />)}
       </tbody>
     </Table>
-    </Container>
   );
 }
   

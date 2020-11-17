@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Container from 'react-bootstrap/Container'
 import fetch from "node-fetch";
 import EmployeeTable from "./EmployeeTable";
 import HandleSearch from "./HandleSearch";
@@ -119,8 +120,7 @@ const DataSort = () => {
 //   };
 
   return (
-    <div className="container">
-      <div className="content">
+      <Container fluid>
         {/* {showEmployeeInfoModal && (
           <Modal onHide={() => setShowEmployeeInfoModal(false)} />
         )} */}
@@ -131,8 +131,7 @@ const DataSort = () => {
           sortClickHandler={sortClickHandler}
           sortObj={sortObj}
         />
-      </div>
-    </div>
+      </Container>
   );
 };
 

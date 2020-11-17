@@ -6,7 +6,7 @@ import DataSort from './components/DataSort'
 
 function App() {
   return (
-    <div className="container">
+    <div className="container md-12 sm-12">
     <Header />
     <DataSort />
     <LoadingIndicator/>
