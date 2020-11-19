@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-.search-box {
+.header {
     font-family: 'Special Elite', cursive;
-    border: 1px solid black;
+    background-color: black;
+    font-size: 80px;
+    color: #fff;
 }
-
 

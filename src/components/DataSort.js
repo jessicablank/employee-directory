@@ -12,10 +12,6 @@ const DataSort = () => {
   const [filterObj, updateFilter] = useState({ name: "" });
   const [filteredEmployees, updateFilteredEmployees] = useState([]);
 
-  //const [showModal, setShowModal] = useState(false);
-  //const [singleEmployeeForModal, setSingleEmployeeForModal] = useState({});
-  //const [showEmployeeInfoModal, setShowEmployeeInfoModal] = useState(false);
-
   //Call API on page load with loading indicator
   useEffect(() => {
     trackPromise(
@@ -109,22 +105,8 @@ const DataSort = () => {
     }
   };
 
-  //Click on one employee to see details
-//   function setEmployeeStateAndShowModal(task) {
-//     setSingleEmployeeForModal(task);
-//     setShowModal(true);
-//   }
-
-//   const handleEmployeeInfoModal = () => {
-//     setShowEmployeeInfoModal(true);
-//   };
-
   return (
       <Container fluid>
-        {/* {showEmployeeInfoModal && (
-          <Modal onHide={() => setShowEmployeeInfoModal(false)} />
-        )} */}
-
         <HandleSearch updateFilter={updateFilter} />
         <EmployeeTable
           employees={filteredEmployees}

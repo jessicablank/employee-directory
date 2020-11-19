@@ -1,5 +1,4 @@
 import React from "react";
-// import Container from 'react-bootstrap/Container'
 import SortToggle from "../utils/SortToggle";
 import Table from 'react-bootstrap/Table'
 import TableRow from "./TableRow";
