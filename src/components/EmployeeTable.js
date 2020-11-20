@@ -8,7 +8,10 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
     <Table responsive striped bordered hover variant="dark">
       <thead>
         <tr>
-          <th>Picture</th>
+          <th>Picture
+          {" "}
+          <i class="fa fa-user" aria-hidden="true"></i>
+          </th>
           <th>
             Agent Name
             {" "}
@@ -48,6 +51,11 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
             field="country"
             sortClickHandler={sortClickHandler}
             sortObj={sortObj}/>
+          </th>
+          <th>
+            Phone 
+            {" "}
+            <i class="fa fa-phone" aria-hidden="true"></i>
           </th>
         </tr>
       </thead>
