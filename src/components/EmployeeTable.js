@@ -5,7 +5,7 @@ import TableRow from "./TableRow";
 
 function EmployeeTable ({employees, sortClickHandler, sortObj}) {
   return (
-    <Table fluid responsive striped bordered hover variant="dark">
+    <Table responsive striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>Picture</th>

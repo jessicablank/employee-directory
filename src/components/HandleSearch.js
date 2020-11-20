@@ -10,10 +10,8 @@ const HandleSearch = ({ updateFilter }) => {
 
   return (
     <div>
-      <InputGroup size="lg" className="mb-3 search-box">
-          <InputGroup.Prepend>
+      <InputGroup responsive="true" size="lg" className="mb-3 search-box">
           <InputGroup.Text>Search By Agent Name</InputGroup.Text>
-          </InputGroup.Prepend>
           <FormControl
         placeholder="Start Typing ... "
         aria-label="Search By Agent Name"
