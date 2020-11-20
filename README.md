@@ -42,7 +42,7 @@ The original homework assignment for this project produced a pretty basic applic
 
  This version also uses the Country Flags API ([https://www.countryflags.io/](https://www.countryflags.io/)) to show the country flag for the agent's nation of origin. 
 
-![demonstration gif](https://github.com/jessicablank/employee-directory/blob/master/assets/directoryGIF.gif)
+![The Directory](https://github.com/jessicablank/employee-directory/blob/master/assets/TheDirectory.PNG)
 
 ## Component Structure
 **Original File Structure:**
