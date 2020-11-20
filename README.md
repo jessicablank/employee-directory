@@ -8,7 +8,9 @@
 Deployed on [github pages](https://jessicablank.github.io/employee-directory/)
 
 ## Description:  
-This is my first boot camp homework assignment bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my first boot camp homework assignment bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Originally designed as an employee directory, now re-imagined as an international agent directory. 
+
+:information_desk_person: Is it for someone seeking an agent for a mission or is it for agent's seeking other agents for companionship? I'll let you decide! 
 
 ## Table of Contents:
 * [Installation](#installation-instructions)
@@ -27,30 +29,52 @@ The original homework assignment for this project produced a pretty basic applic
 
 * When the page loads, a list of random employees from [Random User Generator API](https://randomuser.me/) is displayed in a table. 
 * When the user clicks on the icon next to email, the employees are sorted in ascending or descending order based on email address. 
-* When the user enters a state name in the search field, the employees are sorted by their state of residence. 
+* Provide a search box for users to dynamically search by one category. 
 
 ![demonstration gif](https://github.com/jessicablank/employee-directory/blob/master/assets/homepageGIF.gif)
 
 
-This was my first React application so my brain wasn't thinking in terms of Components yet. It wasn't until I came back to add the Loading Indicator that componentization started to click. The sorting function could work for names, as well as ages, if the sort was broken out into it's own component. 
+ I came back to this assignment to test adding a loading Indicator using npm packages `react-promise-tracker` and `react-loader-spinner`. 
 
-I decided to re-imagine this application as an international "Secret Agent Directory." The work in progress uses data from the Random User API to create an agent code name. This version also uses the [Country Flags API](https://www.countryflags.io/) to show the country flag for the agent's nation of origin. 
+ When I reviewed my code, I realized I could create better componentization to add the sorting function to other fields. Reviewing the Random User Generator API gave me the idea to make this an agent directory. 
 
-![directory gif](https://github.com/jessicablank/employee-directory/blob/master/assets/directoryGIF.gif)
+ This version also uses the [Country Flags API](https://www.countryflags.io/) to show the country flag for the agent's nation of origin. 
+
+![demonstration gif](https://github.com/jessicablank/employee-directory/blob/master/assets/directoryGIF.gif)
 
 
-Original File Structure: 
+**Original File Structure:**
 ```
 ├── App.css
 ├── App.jsx
 ├── components
-|  ├── EmployeeTable.js <--All the sorting logic was here-->
+|  ├── EmployeeTable.js <--All the sorting logic was here. Very Limiting -->
 |  ├── Header.js
 |  └── TableRow.js
 ├── index.js
 └── utils
    └── API.js
+```
+**Refactored File Structure**
 
+```
+   ├── App.css
+   ├── App.jsx
+   ├── components
+   |  ├── DataSort.js
+   |  ├── EmployeeTable.js
+   |  ├── HandleSearch.js
+   |  ├── Header.js
+   |  ├── LoadingIndicator.js
+   |  ├── Modal.js
+   |  └── TableRow.js
+   ├── index.js
+   ├── styles
+   |  ├── Header.css
+   |  └── SearchBox.css
+   └── utils
+      └── SortToggle.js
+```
 ## Questions
 You can reach the author, Jessica Blankemeier, via [github](http://github.com/jessicablank) and [email](mailto:jessicablankemeier@gmail.com)
 ![GitHub](https://img.shields.io/github/followers/jessicablank?label=follow&style=social)
