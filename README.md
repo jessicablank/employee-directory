@@ -5,18 +5,20 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub issues](https://img.shields.io/github/issues/jessicablank/employee-directory)](https://github.com/jessicablank/employee-directory/issues)
 
-Deployed on [github pages](https://jessicablank.github.io/employee-directory/)
+Deployed on github pages: [https://github.com/jessicablank/employee-directory](https://jessicablank.github.io/employee-directory/)
 
 ## Description:  
-This is my first boot camp homework assignment bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Originally designed as an employee directory, now re-imagined as an international agent directory. 
+This is my first boot camp homework assignment bootstrapped with Create React App([https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app)). Originally designed as an employee directory, now re-imagined as an international agent directory. 
 
-:information_desk_person: Is it for someone seeking an agent for a mission or is it for agent's seeking other agents for companionship? I'll let you decide! 
+:information_desk_person: Is it for someone seeking an agent for a mission, or is it for agents seeking other agents for companionship? 
+
+I'll let you decide! 
 
 ## Table of Contents:
 * [Installation](#installation-instructions)
 * [Project Story](#project-story)
-* [Tests](#tests)
-* [Structure](/componentStructure.md)
+* [Component Structure](#componentStructure)
+* [Technologies Used](#Technology)
 * [Questions](#questions)
 * [License](#license-info)
 
@@ -27,7 +29,7 @@ This is my first boot camp homework assignment bootstrapped with [Create React A
 ## Project Story
 The original homework assignment for this project produced a pretty basic application that met the requirements below for Minimum Viable Product (MVP):
 
-* When the page loads, a list of random employees from [Random User Generator API](https://randomuser.me/) is displayed in a table. 
+* When the page loads, a list of random employees from Random User Generator API ([https://randomuser.me/](https://randomuser.me/)) is displayed in a table. 
 * When the user clicks on the icon next to email, the employees are sorted in ascending or descending order based on email address. 
 * Provide a search box for users to dynamically search by one category. 
 
@@ -38,11 +40,11 @@ The original homework assignment for this project produced a pretty basic applic
 
  When I reviewed my code, I realized I could create better componentization to add the sorting function to other fields. Reviewing the Random User Generator API gave me the idea to make this an agent directory. 
 
- This version also uses the [Country Flags API](https://www.countryflags.io/) to show the country flag for the agent's nation of origin. 
+ This version also uses the Country Flags API ([https://www.countryflags.io/](https://www.countryflags.io/)) to show the country flag for the agent's nation of origin. 
 
 ![demonstration gif](https://github.com/jessicablank/employee-directory/blob/master/assets/directoryGIF.gif)
 
-
+## Component Structure
 **Original File Structure:**
 ```
 ├── App.css
@@ -75,6 +77,17 @@ The original homework assignment for this project produced a pretty basic applic
    └── utils
       └── SortToggle.js
 ```
+## Technologies Used
+
+* [Country Flags API](https://www.countryflags.io/)
+* [Create React App](https://github.com/facebook/create-react-app)
+* [Font Awesome Icons](fontawesome.com)
+* [Google Fonts](fonts.google.com)
+* [NPM react-promise-tracker](https://www.npmjs.com/package/react-promise-tracker)
+* [NPM react-loading-spinner](https://www.npmjs.com/package/react-loader-spinner)
+* [Random User Generator API](https://randomuser.me/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
+
 ## Questions
 You can reach the author, Jessica Blankemeier, via [github](http://github.com/jessicablank) and [email](mailto:jessicablankemeier@gmail.com)
 ![GitHub](https://img.shields.io/github/followers/jessicablank?label=follow&style=social)
