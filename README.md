@@ -36,7 +36,7 @@ The original homework assignment for this project produced a pretty basic applic
 ![demonstration gif](https://github.com/jessicablank/employee-directory/blob/master/assets/homepageGIF.gif)
 
 
- I came back to this assignment to test adding a loading Indicator using npm packages `react-promise-tracker` and `react-loader-spinner`. 
+ I came back to this assignment to test adding a React loading indicator using npm packages `react-promise-tracker` and `react-loader-spinner`. 
 
  When I reviewed my code, I realized I could create better componentization to add the sorting function to other fields. Reviewing the Random User Generator API gave me the idea to make this an agent directory. 
 
