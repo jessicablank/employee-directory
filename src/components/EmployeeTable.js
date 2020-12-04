@@ -10,7 +10,7 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
         <tr>
           <th>Picture
           {" "}
-          <i class="fa fa-user" aria-hidden="true"></i>
+          <i className="fa fa-user" aria-hidden="true"></i>
           </th>
           <th>
             Agent Name
@@ -55,7 +55,7 @@ function EmployeeTable ({employees, sortClickHandler, sortObj}) {
           <th>
             Phone 
             {" "}
-            <i class="fa fa-phone" aria-hidden="true"></i>
+            <i className="fa fa-phone" aria-hidden="true"></i>
           </th>
         </tr>
       </thead>
