@@ -11,10 +11,8 @@ function Header() {
         <h1 className="display-4 text-center font-weight-bold">
           {" "}
           THE DIRECTORY
-        </h1>
-      </Container>
+          </h1>
        {/* Octocat in the Corner */}
-       <div>
        <a
             className="github-corner"
             href="https://github.com/jessicablank/employee-directory"
@@ -43,7 +41,8 @@ function Header() {
               />
             </svg>
           </a>
-          </div>
+          
+          </Container>
     </Jumbotron>
   );
 }

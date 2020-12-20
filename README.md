@@ -82,6 +82,7 @@ The original homework assignment for this project produced a pretty basic applic
 * [Country Flags API](https://www.countryflags.io/)
 * [Create React App](https://github.com/facebook/create-react-app)
 * [Font Awesome Icons](fontawesome.com)
+* [GitHub Corners](https://tholman.com/github-corners/)
 * [Google Fonts](fonts.google.com)
 * [NPM react-promise-tracker](https://www.npmjs.com/package/react-promise-tracker)
 * [NPM react-loading-spinner](https://www.npmjs.com/package/react-loader-spinner)
