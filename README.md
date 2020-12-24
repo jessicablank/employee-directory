@@ -69,7 +69,7 @@ The original homework assignment for this project produced a pretty basic applic
    |  ├── HandleSearch.js
    |  ├── Header.js
    |  ├── LoadingIndicator.js
-   |  ├── Modal.js
+   |  ├── Modal.js <--Saving for future development-->
    |  └── TableRow.js
    ├── index.js
    ├── styles
