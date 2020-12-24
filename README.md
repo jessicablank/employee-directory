@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub issues](https://img.shields.io/github/issues/jessicablank/employee-directory)](https://github.com/jessicablank/employee-directory/issues)
 
-Deployed on github pages: [https://github.com/jessicablank/employee-directory](https://jessicablank.github.io/employee-directory/)
+Deployed on GitHub pages: [https://github.com/jessicablank/employee-directory](https://jessicablank.github.io/employee-directory/)
 
 ## Description:  
 This is my first boot camp homework assignment bootstrapped with Create React App([https://github.com/facebook/create-react-app](https://github.com/facebook/create-react-app)). Originally designed as an employee directory, now re-imagined as an international agent directory. 
@@ -24,6 +24,7 @@ I'll let you decide!
 
 ## Installation Instructions
 
+Fork, clone, or download. 
 `npm i` to load dependencies. 
 
 ## Project Story
